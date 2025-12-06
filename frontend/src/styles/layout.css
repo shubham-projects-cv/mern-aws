@@ -1,0 +1,117 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #020617;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 9px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebar-nav a:hover {
+  background: #111827;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  padding: 26px;
+  background: var(--gray);
+  overflow-y: auto;
+}
+
+/* On desktop use grid 2 columns */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* ========== RESPONSIVENESS FIX ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 14px;
+  }
+
+  .sidebar-footer {
+    margin-top: 0;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 450px) {
+  .sidebar {
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .main-content {
+    padding: 14px;
+  }
+}
