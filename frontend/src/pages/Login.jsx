@@ -50,7 +50,7 @@ export default function Login() {
           <button className="login-btn" type="submit">Login</button>
         </form>
 
-        <p className="login-footer">Powered by MERN + AWS</p>
+        <p className="login-footer">Powered By MERN + AWS</p>
       </div>
     </div>
   );
